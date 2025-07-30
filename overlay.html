@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Overlay Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .image-container {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            margin: auto;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            mix-blend-mode: overlay;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Image Overlay Demonstration</h1>
+    <p>This table demonstrates how an overlay image can be combined with different background images using the multiply
+        effect.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Background Image</th>
+                <th>Overlay Image</th>
+                <th>Combined Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="bg-1.jpg" alt="Background 1" width="200" height="300">
+                </td>
+                <td>
+                    <img src="image-overlay.jpg" alt="Overlay" width="200" height="300">
+                </td>
+                <td>
+                    <div class="image-container">
+                        <img src="bg-1.jpg" alt="Background 1" class="background">
+                        <img src="image-overlay.jpg" alt="Overlay" class="overlay">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="bg-2.jpg" alt="Background 2" width="200" height="300">
+                </td>
+                <td>
+                    <img src="image-overlay.jpg" alt="Overlay" width="200" height="300">
+                </td>
+                <td>
+                    <div class="image-container">
+                        <img src="bg-2.jpg" alt="Background 2" class="background">
+                        <img src="image-overlay.jpg" alt="Overlay" class="overlay">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
